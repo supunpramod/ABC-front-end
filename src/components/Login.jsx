@@ -1,5 +1,6 @@
 // AirspaceLogin.jsx
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const AirspaceLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -115,7 +116,7 @@ const AirspaceLogin = () => {
           </div>
 
           <button className="w-full p-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
-            Sign In
+            Login
           </button>
 
           <div className="flex items-center my-5 text-gray-600 text-sm">
@@ -126,9 +127,9 @@ const AirspaceLogin = () => {
 
           <div className="text-center mb-5 text-sm text-gray-600">
             Don't have an account?{' '}
-            <a href="#" className="text-blue-600 font-medium">
+            <Link to="/signup" className="text-blue-600 font-medium">
               Sign up
-            </a>
+            </Link>
           </div>
 
           {/* Social Login Buttons */}
