@@ -1,5 +1,8 @@
 // Signup.jsx
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { BrowserRouter as Router } from 'react-router-dom'; // Import Router
+ 
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -38,7 +41,7 @@ const Signup = () => {
           <h1 className="text-4xl font-semibold mb-4">Create an account</h1>
           <div className="mb-8 text-gray-400">
             Already have an account?{' '}
-            <a href="#" className="text-[#a991ff] hover:underline">Log in</a>
+            <Link to = "/login" className="text-[#a991ff] hover:underline">Log in</Link>
           </div>
 
           <form autoComplete="off">
@@ -46,6 +49,7 @@ const Signup = () => {
               <input
                 type="text"
                 placeholder="First name"
+                defaultValue="Fletcher"
                 autoComplete="off"
                 className="flex-1 p-3 bg-[#2a2a2a] rounded border-none text-white focus:outline-none focus:ring-2 focus:ring-[#7e57c2]"
               />
